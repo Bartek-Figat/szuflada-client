@@ -20,6 +20,7 @@ export const signupUser = createAsyncThunk(
 
 const initialState = {
   status: null,
+  success: '',
 };
 
 export const loginSlice = createSlice({
@@ -28,12 +29,15 @@ export const loginSlice = createSlice({
   extraReducers: {
     [signupUser.pending]: (state, action) => {
       state.status = 'loading';
+      state.success = '';
     },
     [signupUser.fulfilled]: (state, { payload }) => {
       state.status = 'success';
+      state.success = 'Registration successful. Please Verify Your Email Address';
     },
     [signupUser.rejected]: (state, action) => {
       state.status = 'failed';
+      state.success = '';
     },
   },
 });
