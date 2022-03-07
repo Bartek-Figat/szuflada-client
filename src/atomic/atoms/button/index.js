@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Button = ({ children, ...res }) => {
   return (
-    <button className="bg-blue-600 w-full m-3 py-2 px-1 rounded-sm text-white" {...res}>
+    <button className="btn text-white bg-blue-600 hover:bg-blue-700 w-full p-2 rounded-sm" {...res}>
       {children}
     </button>
   );
