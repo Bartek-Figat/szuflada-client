@@ -1,16 +1,24 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { instance } from '../config/axios';
 
-const userLogin = createAsyncThunk('login/userLogin', async (dispatch, state) => {
-  console.log('dispatch: -> 5', dispatch);
-  console.log('state: -> 6', state);
-  await instance.post('/registration');
-});
+export const signupUser = createAsyncThunk(
+  'login/userLogin',
+  async ({ email, password, userName, confirmPassword }, thunkAPI) => {
+    const data = {
+      email,
+      password,
+      userName,
+      confirmPassword,
+    };
+    try {
+      await instance.post('/registration', data);
+    } catch (err) {
+      thunkAPI.rejectWithValue(err.response.data.status);
+    }
+  }
+);
 
 const initialState = {
-  email: '',
-  password: '',
-  userName: '',
   status: null,
 };
 
@@ -18,20 +26,17 @@ export const loginSlice = createSlice({
   name: 'login',
   initialState,
   extraReducers: {
-    [userLogin.pending]: (state, action) => {
+    [signupUser.pending]: (state, action) => {
       state.status = 'loading';
     },
-    [userLogin.fulfilled]: (state, { payload }) => {
-      console.log('payload: -> 25', payload);
-      state.email = payload.email;
-      state.password = payload.password;
-      state.userName = payload.userName;
+    [signupUser.fulfilled]: (state, { payload }) => {
       state.status = 'success';
     },
-    [userLogin.rejected]: (state, action) => {
+    [signupUser.rejected]: (state, action) => {
       state.status = 'failed';
     },
   },
 });
 
+export const userSelector = (state) => state.user;
 export default loginSlice.reducer;
