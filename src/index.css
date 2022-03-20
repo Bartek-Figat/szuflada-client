@@ -16,4 +16,10 @@
   .register-label {
     @apply block text-gray-800 text-sm font-medium mb-1;
   }
+  .btn {
+    @apply font-medium text-sm inline-flex items-center justify-center border border-transparent rounded leading-5 shadow-sm transition duration-150 ease-in-out;
+  }
+  .btn-sm {
+    @apply px-4 py-2 shadow  rounded-sm;
+  }
 }

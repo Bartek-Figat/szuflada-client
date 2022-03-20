@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { unwrapResult } from '@reduxjs/toolkit';
+import { useNavigate } from 'react-router-dom';
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import { signupUser } from '../slice/singUpSlice';
@@ -9,14 +9,9 @@ import { Button } from '../atomic/atoms/button/index';
 import { Form } from '../atomic/molecues/from';
 import { Label } from '../atomic/atoms/label';
 import { FormContent } from '../atomic/molecues/index';
-import AuthImage from '../images/photo.png';
+import AuthImage from '../images/photo-1591818250210-48fba09a2305.png';
 
 const userSchema = yup.object().shape({
-  userName: yup
-    .string()
-    .min(3, 'Name must be at least 3 characters long')
-    .max(20, 'Name cannot be longer than 20 characters')
-    .required('Name is required'),
   email: yup.string().email('Must be a valid email').required('Email is required'),
   password: yup
     .string()
@@ -28,7 +23,7 @@ const userSchema = yup.object().shape({
     .required('Confirm Password is required'),
 });
 
-export const RegisterUserForm = () => {
+export const LoginForm = () => {
   const dispatch = useDispatch();
   const { register } = useSelector((state) => state);
 
@@ -41,37 +36,27 @@ export const RegisterUserForm = () => {
             <div className="w-full">
               <h1 className="text-3xl text-gray-800 font-bold mb-6">Welcome back! ✨</h1>
               {/* Form */}
-
               <Formik
                 initialValues={{
-                  userName: '',
                   email: '',
                   password: '',
                   confirmPassword: '',
                 }}
                 onSubmit={async (values, actions) => {
-                  const { userName, email, password, confirmPassword } = values;
+                  const { email, password, confirmPassword } = values;
                   const data = {
-                    userName,
                     email,
                     password,
                     confirmPassword,
                   };
-                  try {
-                    const resultAction = dispatch(signupUser(data)).unwrap();
-                    const originalPromiseResult = unwrapResult(resultAction);
-                    console.log('->', originalPromiseResult);
-                    actions.resetForm({
-                      values: {
-                        userName: '',
-                        email: '',
-                        password: '',
-                        confirmPassword: '',
-                      },
-                    });
-                  } catch (rejectedValueOrSerializedError) {
-                    console.log(rejectedValueOrSerializedError);
-                  }
+                  dispatch(signupUser(data));
+                  actions.resetForm({
+                    values: {
+                      email: '',
+                      password: '',
+                      confirmPassword: '',
+                    },
+                  });
                 }}
                 validationSchema={userSchema}
               >
@@ -85,15 +70,15 @@ export const RegisterUserForm = () => {
                   isSubmitting,
                 }) => (
                   <Form onSubmit={handleSubmit}>
-                    {register.success > 0 ? (
+                    {register.status === 'success' && register.success !== '' ? (
                       <div
-                        class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
+                        className="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
                         role="alert"
                       >
-                        <div class="flex">
-                          <div class="py-1">
+                        <div className="flex">
+                          <div className="py-1">
                             <svg
-                              class="fill-current h-6 w-6 text-teal-500 mr-4"
+                              className="fill-current h-6 w-6 text-teal-500 mr-4"
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20"
                             >
@@ -101,31 +86,11 @@ export const RegisterUserForm = () => {
                             </svg>
                           </div>
                           <div>
-                            <p class="text-sm">{register.success}</p>
+                            <p className="text-sm">{register.success}</p>
                           </div>
                         </div>
                       </div>
                     ) : null}
-                    <FormContent>
-                      <Label htmlFor="userName">Name</Label>
-                      <Input
-                        id="userName"
-                        type="text"
-                        name="userName"
-                        placeholder="John Smith"
-                        onBlur={handleBlur}
-                        value={values.userName}
-                        onChange={(e) => {
-                          handleChange(e);
-                        }}
-                        style={{
-                          borderColor: errors.userName && touched.userName ? 'red' : null,
-                        }}
-                      />
-                      <ErrorMessage name="userName">
-                        {(msg) => <div className="text-red-500 text-md italic">{msg}</div>}
-                      </ErrorMessage>
-                    </FormContent>
                     <FormContent>
                       <Label htmlFor="email">Email</Label>
                       <Input
@@ -187,7 +152,7 @@ export const RegisterUserForm = () => {
                         {(msg) => <div className="text-red-500 text-md italic">{msg}</div>}
                       </ErrorMessage>
                     </FormContent>
-                    {register.loading ? (
+                    {register.status === 'loading' && register.success === '' ? (
                       <div className="flex flex-wrap -mx-3 mt-6">
                         <div className="w-full px-3">
                           <button
@@ -204,7 +169,7 @@ export const RegisterUserForm = () => {
                         <div className="w-full px-3">
                           <Button type="submit" disabled={isSubmitting}>
                             {' '}
-                            Register{' '}
+                            Login{' '}
                           </Button>
                         </div>
                       </div>
@@ -224,6 +189,7 @@ export const RegisterUserForm = () => {
                   </Form>
                 )}
               </Formik>
+              {/* Footer */}
               <div
                 className="hidden md:block absolute top-0 bottom-0 right-0 md:w-1/2"
                 aria-hidden="true"

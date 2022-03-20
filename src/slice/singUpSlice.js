@@ -13,14 +13,15 @@ export const signupUser = createAsyncThunk(
     try {
       await instance.post('/registration', data);
     } catch (err) {
-      thunkAPI.rejectWithValue(err.response.data.status);
+      throw Error(err);
     }
   }
 );
 
 const initialState = {
-  status: null,
   success: '',
+  loading: null,
+  error: null,
 };
 
 export const loginSlice = createSlice({
@@ -28,19 +29,20 @@ export const loginSlice = createSlice({
   initialState,
   extraReducers: {
     [signupUser.pending]: (state, action) => {
-      state.status = 'loading';
       state.success = '';
+      state.loading = true;
+      state.error = null;
     },
     [signupUser.fulfilled]: (state, { payload }) => {
-      state.status = 'success';
+      state.loading = false;
       state.success = 'Registration successful. Please Verify Your Email Address';
     },
     [signupUser.rejected]: (state, action) => {
-      state.status = 'failed';
       state.success = '';
+      state.loading = false;
+      state.error = action.error.name;
     },
   },
 });
 
-export const userSelector = (state) => state.user;
 export default loginSlice.reducer;
