@@ -2,6 +2,8 @@ import React from 'react';
 import Header from './header';
 import Slider from './slider';
 import Categories from './categories';
+import NewPosts from './newPosts';
+import SliderHeader from './headerSlider';
 
 function Main() {
   return (
@@ -9,6 +11,7 @@ function Main() {
       <Header />
       <Slider />
       <Categories />
+      <NewPosts />
     </div>
   );
 }

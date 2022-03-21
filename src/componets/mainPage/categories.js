@@ -11,6 +11,7 @@ import { AiFillCar } from 'react-icons/ai';
 import { FaDog, FaBaby } from 'react-icons/fa';
 import { BiBed } from 'react-icons/bi';
 import { RiServiceLine, RiMentalHealthLine } from 'react-icons/ri';
+import { MdOutlineComputer } from 'react-icons/md';
 
 function Categories() {
   return (
@@ -25,74 +26,98 @@ function Categories() {
         <ul className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
           <li className="group">
             <div className="hover:border-b-1 hover:border-gray-300 rounded  flex justify-center flex-col items-center w-full h-full border  shadow-sm bg-white p-4 cursor-pointer transition duration-200 ease-linear transform group-hover:shadow-lg">
-              <BsFillHouseDoorFill className="text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
-              <h2>Properties</h2>
+              <BsFillHouseDoorFill className="text-teal-200 text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
+              <h2 className="text-sm text-gray-600 font-serif font-medium leading-tight line-clamp-1">
+                Properties
+              </h2>
             </div>
           </li>
           <li className="group">
             <div className="hover:border-b-1 hover:border-gray-300 rounded flex justify-center flex-col items-center w-full h-full border shadow-sm bg-white p-4 cursor-pointer transition duration-200 ease-linear transform group-hover:shadow-lg">
-              <MdOutlineEmojiFoodBeverage className="text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
-              <h2>Food</h2>
+              <MdOutlineEmojiFoodBeverage className="text-sky-300 text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
+              <h2 className="text-sm text-gray-600 font-serif font-medium leading-tight line-clamp-1">
+                Food
+              </h2>
             </div>
           </li>
           <li className="group">
             <div className="hover:border-b-1 hover:border-gray-300 rounded flex justify-center flex-col items-center w-full h-full border shadow-sm bg-white p-4 cursor-pointer transition duration-200 ease-linear transform group-hover:shadow-lg">
-              <GrPersonalComputer className="text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
-              <h2>Electronics</h2>
+              <MdOutlineComputer className="text-teal-300 text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
+              <h2 className="text-sm text-gray-600 font-serif font-medium leading-tight line-clamp-1">
+                Electronics
+              </h2>
             </div>
           </li>
           <li className="group">
             <div className="hover:border-b-1 hover:border-gray-300 rounded flex justify-center flex-col items-center w-full h-full border shadow-sm bg-white p-4 cursor-pointer transition duration-200 ease-linear transform group-hover:shadow-lg">
-              <SiGitbook className="text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
-              <h2>Education</h2>
+              <SiGitbook className="text-indigo-300 text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
+              <h2 className="text-sm text-gray-600 font-serif font-medium leading-tight line-clamp-1">
+                Education
+              </h2>
             </div>
           </li>
           <li className="group">
             <div className="hover:border-b-1 hover:border-gray-300 rounded flex justify-center flex-col items-center  w-full h-full border shadow-sm bg-white p-4 cursor-pointer transition duration-200 ease-linear transform group-hover:shadow-lg">
-              <AiFillCar className="text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
-              <h2>Cars</h2>
+              <AiFillCar className="text-violet-300 text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
+              <h2 className="text-sm text-gray-600 font-serif font-medium leading-tight line-clamp-1">
+                Cars
+              </h2>
             </div>
           </li>
           <li className="group">
             <div className="hover:border-b-1 hover:border-gray-300 rounded flex justify-center flex-col items-center w-full h-full border shadow-sm bg-white p-4 cursor-pointer transition duration-200 ease-linear transform group-hover:shadow-lg">
-              <FaDog className="text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
-              <h2>Animals</h2>
+              <FaDog className="text-purple-300 text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
+              <h2 className="text-sm text-gray-600 font-serif font-medium leading-tight line-clamp-1">
+                Animals
+              </h2>
             </div>
           </li>
           <li className="group">
             <div className="hover:border-b-1 hover:border-gray-300 rounded flex justify-center flex-col items-center w-full h-full border shadow-sm bg-white p-4 cursor-pointer transition duration-200 ease-linear transform group-hover:shadow-lg">
-              <BiBed className="text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
-              <h2>Furniture</h2>
+              <BiBed className="text-fuchsia-300 text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
+              <h2 className="text-sm text-gray-600 font-serif font-medium leading-tight line-clamp-1">
+                Furniture
+              </h2>
             </div>
           </li>
           <li className="group">
             <div className="hover:border-b-1 hover:border-gray-300 rounded flex justify-center flex-col items-center w-full h-full border shadow-sm bg-white p-4 cursor-pointer transition duration-200 ease-linear transform group-hover:shadow-lg">
-              <RiServiceLine className="text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
-              <h2>Services</h2>
+              <RiServiceLine className="text-pink-300 text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
+              <h2 className="text-sm text-gray-600 font-serif font-medium leading-tight line-clamp-1">
+                Services
+              </h2>
             </div>
           </li>
           <li className="group">
             <div className="hover:border-b-1 hover:border-gray-300 rounded flex justify-center flex-col items-center w-full h-full border shadow-sm bg-white p-4 cursor-pointer transition duration-200 ease-linear transform group-hover:shadow-lg">
-              <RiMentalHealthLine className="text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
-              <h2>Beauty Health</h2>
+              <RiMentalHealthLine className="text-rose-300 text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
+              <h2 className="text-sm text-gray-600 font-serif font-medium leading-tight line-clamp-1">
+                Beauty Health
+              </h2>
             </div>
           </li>
           <li className="group">
             <div className="hover:border-b-1 hover:border-gray-300 rounded flex justify-center flex-col items-center w-full h-full border shadow-sm bg-white p-4 cursor-pointer transition duration-200 ease-linear transform group-hover:shadow-lg">
-              <MdOutlineSportsHandball className="text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
-              <h2>Sports Fitness</h2>
+              <MdOutlineSportsHandball className="text-orange-300 text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
+              <h2 className="text-sm text-gray-600 font-serif font-medium leading-tight line-clamp-1">
+                Sports Fitness
+              </h2>
             </div>
           </li>
           <li className="group">
             <div className="hover:border-b-1 hover:border-gray-300 rounded flex justify-center flex-col items-center w-full h-full border shadow-sm bg-white p-4 cursor-pointer transition duration-200 ease-linear transform group-hover:shadow-lg">
-              <FaBaby className="text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
-              <h2>Baby Care</h2>
+              <FaBaby className="text-amber-300 text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
+              <h2 className="text-sm text-gray-600 font-serif font-medium leading-tight line-clamp-1">
+                Baby Care
+              </h2>
             </div>
           </li>
           <li className="group">
             <div className="hover:border-b-1 hover:border-gray-300 rounded flex justify-center flex-col items-center w-full h-full border shadow-sm bg-white p-4 cursor-pointer transition duration-200 ease-linear transform group-hover:shadow-lg">
-              <MdTravelExplore className="text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
-              <h2>Travel</h2>
+              <MdTravelExplore className="text-lime-300 text-5xl object-cover transition duration-150 ease-linear transform group-hover:scale-105" />
+              <h2 className="text-sm text-gray-600 font-serif font-medium leading-tight line-clamp-1">
+                Travel
+              </h2>
             </div>
           </li>
         </ul>

@@ -7,10 +7,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/autoplay';
 import AuthImage from '../../images/photo-1591818250210-48fba09a2305.png';
-import Image from '../../images/photo.png';
-import ImageOne from '../../images/p1.png';
 
-function Slider() {
+function SliderHeader() {
   return (
     <div className="bg-white">
       <div className="mx-auto py-5 max-w-screen-2xl px-3 sm:px-10">
@@ -52,42 +50,11 @@ function Slider() {
               <SwiperSlide>
                 <img
                   className="object-cover object-center w-full h-full"
-                  src={Image}
+                  src={AuthImage}
                   width="760"
                   height="1024"
                   alt="Authentication"
                 />
-                <div class="absolute top-0 left-10 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
-                  <div class="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
-                    <h1 class="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-100">
-                      Quality Freshness Guaranteed!
-                    </h1>
-                    <p class="text-base leading-6 text-gray-100 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
-                      Intrinsicly fashion performance based products rather than accurate
-                      benefits...
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <img
-                  className="object-cover object-center w-full h-full"
-                  src={ImageOne}
-                  width="760"
-                  height="1024"
-                  alt="Authentication"
-                />
-                <div class="absolute top-0 left-10 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
-                  <div class="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
-                    <h1 class="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-100">
-                      Quality Freshness Guaranteed!
-                    </h1>
-                    <p class="text-base leading-6 text-gray-100 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
-                      Intrinsicly fashion performance based products rather than accurate
-                      benefits...
-                    </p>
-                  </div>
-                </div>
               </SwiperSlide>
               <SwiperSlide>
                 <img
@@ -97,17 +64,15 @@ function Slider() {
                   height="1024"
                   alt="Authentication"
                 />
-                <div class="absolute top-0 left-10 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
-                  <div class="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
-                    <h1 class="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-100">
-                      Quality Freshness Guaranteed!
-                    </h1>
-                    <p class="text-base leading-6 text-gray-100 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
-                      Intrinsicly fashion performance based products rather than accurate
-                      benefits...
-                    </p>
-                  </div>
-                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                  className="object-cover object-center w-full h-full"
+                  src={AuthImage}
+                  width="760"
+                  height="1024"
+                  alt="Authentication"
+                />
               </SwiperSlide>
             </Swiper>
           </div>
@@ -117,4 +82,4 @@ function Slider() {
   );
 }
 
-export default Slider;
+export default SliderHeader;
