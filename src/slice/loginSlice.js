@@ -1,17 +1,19 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { instance } from '../config/axios';
 
-export const signupUser = createAsyncThunk(
+export const loginUser = createAsyncThunk(
   'login/userLogin',
   async ({ email, password, userName, confirmPassword }, { rejectWithValue }) => {
-    const data = {
+    const response = {
       email,
       password,
       userName,
       confirmPassword,
     };
     try {
-      await instance.post('/registration', data);
+      const { data } = await instance.post('/login', response);
+      localStorage.setItem('token', data.generateAccessToken);
+      window.location.href = '/admin';
     } catch (error) {
       if (!error.response) {
         throw error;
@@ -22,7 +24,7 @@ export const signupUser = createAsyncThunk(
 );
 
 const initialState = {
-  success: '',
+  success: null,
   loading: null,
   error: '',
 };
@@ -31,19 +33,23 @@ export const loginSlice = createSlice({
   name: 'login',
   initialState,
   extraReducers: {
-    [signupUser.pending]: (state, action) => {
-      state.success = '';
+    [loginUser.pending]: (state, { payload }) => {
+      console.log('36', payload);
+      state.success = false;
       state.loading = true;
-      state.error = '';
+      state.error = null;
     },
-    [signupUser.fulfilled]: (state, { payload }) => {
+    [loginUser.fulfilled]: (state, { payload }) => {
+      console.log('42', payload);
       state.loading = false;
-      state.success = 'Registration successful. Please Verify Your Email Address';
+      state.success = true;
     },
-    [signupUser.rejected]: (state, { payload }) => {
-      state.success = '';
+    [loginUser.rejected]: (state, { payload }) => {
+      console.log('47', payload);
+      state.success = false;
       state.loading = false;
-      state.error = payload.error;
+      state.error = payload;
+      localStorage.removeItem('token');
     },
   },
 });

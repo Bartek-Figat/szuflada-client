@@ -1,6 +1,5 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { unwrapResult } from '@reduxjs/toolkit';
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import { signupUser } from '../slice/singUpSlice';
@@ -57,21 +56,15 @@ export const RegisterUserForm = () => {
                     password,
                     confirmPassword,
                   };
-                  try {
-                    const resultAction = dispatch(signupUser(data)).unwrap();
-                    const originalPromiseResult = unwrapResult(resultAction);
-                    console.log('->', originalPromiseResult);
-                    actions.resetForm({
-                      values: {
-                        userName: '',
-                        email: '',
-                        password: '',
-                        confirmPassword: '',
-                      },
-                    });
-                  } catch (rejectedValueOrSerializedError) {
-                    console.log(rejectedValueOrSerializedError);
-                  }
+                  dispatch(signupUser(data));
+                  actions.resetForm({
+                    values: {
+                      userName: '',
+                      email: '',
+                      password: '',
+                      confirmPassword: '',
+                    },
+                  });
                 }}
                 validationSchema={userSchema}
               >
@@ -85,15 +78,15 @@ export const RegisterUserForm = () => {
                   isSubmitting,
                 }) => (
                   <Form onSubmit={handleSubmit}>
-                    {register.success > 0 ? (
+                    {register.success.length > 0 ? (
                       <div
-                        class="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
+                        className="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
                         role="alert"
                       >
-                        <div class="flex">
-                          <div class="py-1">
+                        <div className="flex">
+                          <div className="py-1">
                             <svg
-                              class="fill-current h-6 w-6 text-teal-500 mr-4"
+                              className="fill-current h-6 w-6 text-teal-500 mr-4"
                               xmlns="http://www.w3.org/2000/svg"
                               viewBox="0 0 20 20"
                             >
@@ -101,11 +94,21 @@ export const RegisterUserForm = () => {
                             </svg>
                           </div>
                           <div>
-                            <p class="text-sm">{register.success}</p>
+                            <p className="text-sm">{register.success}</p>
                           </div>
                         </div>
                       </div>
                     ) : null}
+
+                    {register.error.length > 0 ? (
+                      <div
+                        className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4"
+                        role="alert"
+                      >
+                        <p>{register.error}</p>
+                      </div>
+                    ) : null}
+
                     <FormContent>
                       <Label htmlFor="userName">Name</Label>
                       <Input

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
-import { signupUser } from '../slice/singUpSlice';
+import { loginUser } from '../slice/loginSlice';
 import { Input } from '../atomic/atoms/input/index';
 import { Button } from '../atomic/atoms/button/index';
 import { Form } from '../atomic/molecues/from';
@@ -25,8 +25,7 @@ const userSchema = yup.object().shape({
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
-  const { register } = useSelector((state) => state);
-
+  const { login } = useSelector((state) => state);
   return (
     <main className="bg-white">
       <div className="relative md:flex">
@@ -49,14 +48,7 @@ export const LoginForm = () => {
                     password,
                     confirmPassword,
                   };
-                  dispatch(signupUser(data));
-                  actions.resetForm({
-                    values: {
-                      email: '',
-                      password: '',
-                      confirmPassword: '',
-                    },
-                  });
+                  dispatch(loginUser(data));
                 }}
                 validationSchema={userSchema}
               >
@@ -70,27 +62,6 @@ export const LoginForm = () => {
                   isSubmitting,
                 }) => (
                   <Form onSubmit={handleSubmit}>
-                    {register.status === 'success' && register.success !== '' ? (
-                      <div
-                        className="bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md"
-                        role="alert"
-                      >
-                        <div className="flex">
-                          <div className="py-1">
-                            <svg
-                              className="fill-current h-6 w-6 text-teal-500 mr-4"
-                              xmlns="http://www.w3.org/2000/svg"
-                              viewBox="0 0 20 20"
-                            >
-                              <path d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM9 11V9h2v6H9v-4zm0-6h2v2H9V5z" />
-                            </svg>
-                          </div>
-                          <div>
-                            <p className="text-sm">{register.success}</p>
-                          </div>
-                        </div>
-                      </div>
-                    ) : null}
                     <FormContent>
                       <Label htmlFor="email">Email</Label>
                       <Input
@@ -152,28 +123,15 @@ export const LoginForm = () => {
                         {(msg) => <div className="text-red-500 text-md italic">{msg}</div>}
                       </ErrorMessage>
                     </FormContent>
-                    {register.status === 'loading' && register.success === '' ? (
-                      <div className="flex flex-wrap -mx-3 mt-6">
-                        <div className="w-full px-3">
-                          <button
-                            type="button"
-                            className="btn text-white bg-blue-600 hover:bg-blue-700 w-full p-2 rounded-sm"
-                            disabled
-                          >
-                            Processing...
-                          </button>
-                        </div>
+
+                    <div className="flex flex-wrap -mx-3 mt-6">
+                      <div className="w-full px-3">
+                        <Button type="submit" disabled={isSubmitting}>
+                          {' '}
+                          Login{' '}
+                        </Button>
                       </div>
-                    ) : (
-                      <div className="flex flex-wrap -mx-3 mt-6">
-                        <div className="w-full px-3">
-                          <Button type="submit" disabled={isSubmitting}>
-                            {' '}
-                            Login{' '}
-                          </Button>
-                        </div>
-                      </div>
-                    )}
+                    </div>
 
                     <div className="text-sm text-gray-500 text-center mt-3">
                       By creating an account, you agree to the{' '}

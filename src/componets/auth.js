@@ -18,7 +18,7 @@ export const Authentication = () => {
       }
     }
     fetchData();
-  }, []);
+  }, [dispatch, navigate, params]);
 
   return <div>...</div>;
 };

@@ -1,13 +1,19 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { instance } from '../config/axios';
 
-export const authenticationPage = createAsyncThunk('auth/authToken', async (params, thunkAPI) => {
-  try {
-    await instance.get(`/activate/${params.token}`);
-  } catch (err) {
-    thunkAPI.rejectWithValue(err.response.data.status);
+export const authenticationPage = createAsyncThunk(
+  'auth/authToken',
+  async (params, { rejectWithValue }) => {
+    try {
+      await instance.get(`/activate/${params.token}`);
+    } catch (error) {
+      if (!error.response) {
+        throw error;
+      }
+      return rejectWithValue(error.response.data);
+    }
   }
-});
+);
 
 const initialState = {
   status: null,
@@ -17,14 +23,14 @@ export const authentication = createSlice({
   name: 'auth',
   initialState,
   extraReducers: {
-    [authenticationPage.pending]: (state, action) => {
-      state.status = 'loading';
+    [authenticationPage.pending]: (state, { payload }) => {
+      state.status = payload;
     },
     [authenticationPage.fulfilled]: (state, { payload }) => {
-      state.status = 'success';
+      state.status = payload;
     },
-    [authenticationPage.rejected]: (state, action) => {
-      state.status = 'failed';
+    [authenticationPage.rejected]: (state, { payload }) => {
+      state.status = payload;
     },
   },
 });
