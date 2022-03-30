@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import { loginUser } from '../slice/loginSlice';
@@ -25,7 +24,6 @@ const userSchema = yup.object().shape({
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
-  const { login } = useSelector((state) => state);
   return (
     <main className="bg-white">
       <div className="relative md:flex">

@@ -1,4 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import { Navigate } from 'react-router-dom';
 import { instance } from '../config/axios';
 
 export const loginUser = createAsyncThunk(
@@ -12,7 +13,11 @@ export const loginUser = createAsyncThunk(
     };
     try {
       const { data } = await instance.post('/login', response);
-      localStorage.setItem('token', data.generateAccessToken);
+      if (data.generateAccessToken) {
+        localStorage.setItem('token', data.generateAccessToken);
+        <Navigate to="/admin" replace />;
+      }
+
       window.location.href = '/admin';
     } catch (error) {
       if (!error.response) {
