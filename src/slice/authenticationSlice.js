@@ -27,7 +27,7 @@ export const authentication = createSlice({
       state.status = payload;
     },
     [authenticationPage.fulfilled]: (state, { payload }) => {
-      state.status = payload;
+      state.status = 'Success';
     },
     [authenticationPage.rejected]: (state, { payload }) => {
       state.status = payload;

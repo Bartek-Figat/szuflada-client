@@ -1,5 +1,6 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+
+import { useDispatch, useSelector } from 'react-redux';
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
 import { loginUser } from '../slice/loginSlice';
@@ -24,6 +25,7 @@ const userSchema = yup.object().shape({
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
+  const { login } = useSelector((state) => state);
   return (
     <main className="bg-white">
       <div className="relative md:flex">
@@ -47,6 +49,13 @@ export const LoginForm = () => {
                     confirmPassword,
                   };
                   dispatch(loginUser(data));
+                  actions.resetForm({
+                    values: {
+                      email: '',
+                      password: '',
+                      confirmPassword: '',
+                    },
+                  });
                 }}
                 validationSchema={userSchema}
               >
@@ -60,6 +69,14 @@ export const LoginForm = () => {
                   isSubmitting,
                 }) => (
                   <Form onSubmit={handleSubmit}>
+                    {login.error.length > 0 ? (
+                      <div
+                        className="bg-orange-100 border-l-4 border-orange-500 text-orange-700 p-4"
+                        role="alert"
+                      >
+                        <p>{login.error}</p>
+                      </div>
+                    ) : null}
                     <FormContent>
                       <Label htmlFor="email">Email</Label>
                       <Input

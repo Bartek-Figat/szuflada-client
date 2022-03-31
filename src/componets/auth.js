@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { authenticationPage } from '../slice/authenticationSlice';
 
 export const Authentication = () => {
@@ -14,7 +14,7 @@ export const Authentication = () => {
         dispatch(authenticationPage(params));
         navigate('/login');
       } catch (err) {
-        navigate('/');
+        navigate('/login');
       }
     }
     fetchData();

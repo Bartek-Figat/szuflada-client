@@ -17,8 +17,6 @@ export const loginUser = createAsyncThunk(
         localStorage.setItem('token', data.generateAccessToken);
         <Navigate to="/admin" replace />;
       }
-
-      window.location.href = '/admin';
     } catch (error) {
       if (!error.response) {
         throw error;
@@ -39,22 +37,18 @@ export const loginSlice = createSlice({
   initialState,
   extraReducers: {
     [loginUser.pending]: (state, { payload }) => {
-      console.log('36', payload);
       state.success = false;
       state.loading = true;
-      state.error = null;
+      state.error = '';
     },
     [loginUser.fulfilled]: (state, { payload }) => {
-      console.log('42', payload);
       state.loading = false;
       state.success = true;
     },
     [loginUser.rejected]: (state, { payload }) => {
-      console.log('47', payload);
       state.success = false;
       state.loading = false;
-      state.error = payload;
-      localStorage.removeItem('token');
+      state.error = payload.error;
     },
   },
 });
