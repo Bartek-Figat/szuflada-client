@@ -77,7 +77,7 @@ const data = [
 
 function Categories() {
   return (
-    <div className="lg:py-16 py-10 mt-8">
+    <div className="lg:py-16  mt-8">
       <div className="mx-auto max-w-screen-2xl px-3 sm:px-10">
         <div class="mb-10 flex justify-center">
           <div class="text-center w-full lg:w-2/5">

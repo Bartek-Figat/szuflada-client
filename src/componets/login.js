@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { Formik, ErrorMessage } from 'formik';
 import * as yup from 'yup';
@@ -26,6 +26,10 @@ const userSchema = yup.object().shape({
 export const LoginForm = () => {
   const dispatch = useDispatch();
   const { login } = useSelector((state) => state);
+  let navigate = useNavigate();
+  let location = useLocation();
+  let from = location.state?.from?.pathname;
+  console.log('from -> 32', location);
   return (
     <main className="bg-white">
       <div className="relative md:flex">
@@ -56,6 +60,8 @@ export const LoginForm = () => {
                       confirmPassword: '',
                     },
                   });
+                  console.log('location -> 63', location);
+                  navigate('/admin', { replace: true });
                 }}
                 validationSchema={userSchema}
               >

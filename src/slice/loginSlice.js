@@ -4,19 +4,16 @@ import { instance } from '../config/axios';
 
 export const loginUser = createAsyncThunk(
   'login/userLogin',
-  async ({ email, password, userName, confirmPassword }, { rejectWithValue }) => {
+  async ({ email, password, confirmPassword }, { rejectWithValue }) => {
     const response = {
       email,
       password,
-      userName,
       confirmPassword,
     };
     try {
       const { data } = await instance.post('/login', response);
-      if (data.generateAccessToken) {
-        localStorage.setItem('token', data.generateAccessToken);
-        <Navigate to="/admin" replace />;
-      }
+      const { generateAccessToken } = data;
+      localStorage.setItem('token', generateAccessToken);
     } catch (error) {
       if (!error.response) {
         throw error;
