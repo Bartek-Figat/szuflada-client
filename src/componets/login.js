@@ -1,7 +1,7 @@
-import React from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import { Formik, ErrorMessage } from 'formik';
+import { Formik, ErrorMessage, useFormikContext } from 'formik';
 import * as yup from 'yup';
 import { loginUser } from '../slice/loginSlice';
 import { Input } from '../atomic/atoms/input/index';
@@ -27,9 +27,17 @@ export const LoginForm = () => {
   const dispatch = useDispatch();
   const { login } = useSelector((state) => state);
   let navigate = useNavigate();
-  let location = useLocation();
-  let from = location.state?.from?.pathname;
-  console.log('from -> 32', location);
+
+  const AutoSubmitToken = () => {
+    const { submitForm } = useFormikContext();
+    useEffect(() => {
+      if (!login.token && !login.success) return;
+      localStorage.setItem('token', login.token);
+      navigate('/admin', { replace: true });
+    }, [submitForm]);
+    return null;
+  };
+
   return (
     <main className="bg-white">
       <div className="relative md:flex">
@@ -60,8 +68,6 @@ export const LoginForm = () => {
                       confirmPassword: '',
                     },
                   });
-                  console.log('location -> 63', location);
-                  navigate('/admin', { replace: true });
                 }}
                 validationSchema={userSchema}
               >
@@ -83,6 +89,7 @@ export const LoginForm = () => {
                         <p>{login.error}</p>
                       </div>
                     ) : null}
+                    <AutoSubmitToken />
                     <FormContent>
                       <Label htmlFor="email">Email</Label>
                       <Input

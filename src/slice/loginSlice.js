@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { Navigate } from 'react-router-dom';
 import { instance } from '../config/axios';
 
 export const loginUser = createAsyncThunk(
@@ -13,7 +12,7 @@ export const loginUser = createAsyncThunk(
     try {
       const { data } = await instance.post('/login', response);
       const { generateAccessToken } = data;
-      localStorage.setItem('token', generateAccessToken);
+      return await generateAccessToken;
     } catch (error) {
       if (!error.response) {
         throw error;
@@ -27,6 +26,7 @@ const initialState = {
   success: null,
   loading: null,
   error: '',
+  token: '',
 };
 
 export const loginSlice = createSlice({
@@ -37,15 +37,18 @@ export const loginSlice = createSlice({
       state.success = false;
       state.loading = true;
       state.error = '';
+      state.token = '';
     },
     [loginUser.fulfilled]: (state, { payload }) => {
       state.loading = false;
       state.success = true;
+      state.token = payload;
     },
     [loginUser.rejected]: (state, { payload }) => {
       state.success = false;
       state.loading = false;
       state.error = payload.error;
+      state.token = '';
     },
   },
 });

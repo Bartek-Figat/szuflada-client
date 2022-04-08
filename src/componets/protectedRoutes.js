@@ -1,25 +1,11 @@
+import React from 'react';
 import { Navigate, Outlet, useLocation } from 'react-router-dom';
 
-export const isAuth =
-  typeof window.localStorage.token === 'string' && window.localStorage.token.length > 0;
-
-export const ProtectedRoute = ({ children }) => {
+export const ProtectedRoute = () => {
   const location = useLocation();
-  console.log('children', children);
-  console.log('location -> 9', location);
-  return typeof window.localStorage.token === 'string' ? (
+  return localStorage.getItem('token') ? (
     <Outlet />
   ) : (
-    <Navigate to="/" replace state={{ from: location }} />
+    <Navigate to="/" state={{ from: location }} replace />
   );
 };
-
-// export const ProtectedRoute = ({ children }) => {
-//   const location = useLocation();
-//   let auth = window.localStorage.token === 'string' && window.localStorage.token.length > 0;
-//   if (auth) {
-//     return <Navigate to="/admin" state={{ from: location }} replace />;
-//   }
-
-//   return children;
-// };
