@@ -26,8 +26,6 @@ function Slider() {
               scrollbar={{ draggable: true }}
               autoplay={{ delay: 5000 }}
               pagination={{ clickable: true }}
-              onSwiper={(swiper) => console.log(swiper)}
-              onSlideChange={() => console.log('slide change')}
             >
               <SwiperSlide>
                 <img
@@ -37,12 +35,12 @@ function Slider() {
                   height="1024"
                   alt="Authentication"
                 />
-                <div class="absolute top-0 left-10 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
-                  <div class="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
-                    <h1 class="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-100">
+                <div className="absolute top-0 left-10 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
+                  <div className="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
+                    <h1 className="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-100">
                       Quality Freshness Guaranteed!
                     </h1>
-                    <p class="text-base leading-6 text-gray-100 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
+                    <p className="text-base leading-6 text-gray-100 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
                       Intrinsicly fashion performance based products rather than accurate
                       benefits...
                     </p>
@@ -57,12 +55,12 @@ function Slider() {
                   height="1024"
                   alt="Authentication"
                 />
-                <div class="absolute top-0 left-10 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
-                  <div class="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
-                    <h1 class="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-100">
+                <div className="absolute top-0 left-10 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
+                  <div className="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
+                    <h1 className="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-100">
                       Quality Freshness Guaranteed!
                     </h1>
-                    <p class="text-base leading-6 text-gray-100 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
+                    <p className="text-base leading-6 text-gray-100 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
                       Intrinsicly fashion performance based products rather than accurate
                       benefits...
                     </p>
@@ -77,12 +75,12 @@ function Slider() {
                   height="1024"
                   alt="Authentication"
                 />
-                <div class="absolute top-0 left-10 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
-                  <div class="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
-                    <h1 class="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-100">
+                <div className="absolute top-0 left-10 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
+                  <div className="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
+                    <h1 className="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-100">
                       Quality Freshness Guaranteed!
                     </h1>
-                    <p class="text-base leading-6 text-gray-100 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
+                    <p className="text-base leading-6 text-gray-100 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
                       Intrinsicly fashion performance based products rather than accurate
                       benefits...
                     </p>
@@ -97,12 +95,12 @@ function Slider() {
                   height="1024"
                   alt="Authentication"
                 />
-                <div class="absolute top-0 left-10 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
-                  <div class="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
-                    <h1 class="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-100">
+                <div className="absolute top-0 left-10 z-10 p-r-16 flex-col flex w-full h-full place-items-start justify-center">
+                  <div className="pl-4 pr-12 sm:pl-10 sm:pr-16 w-10/12 lg:w-8/12 xl:w-7/12">
+                    <h1 className="mb-2 font-serif text-xl sm:text-lg md:text-2xl line-clamp-1 md:line-clamp-none lg:line-clamp-none lg:text-3xl font-bold text-gray-100">
                       Quality Freshness Guaranteed!
                     </h1>
-                    <p class="text-base leading-6 text-gray-100 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
+                    <p className="text-base leading-6 text-gray-100 font-sans line-clamp-1 md:line-clamp-none lg:line-clamp-none">
                       Intrinsicly fashion performance based products rather than accurate
                       benefits...
                     </p>

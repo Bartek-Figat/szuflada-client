@@ -13,10 +13,10 @@ function SliderHeader() {
     <div className="bg-gray-50 lg:py-16 py-10 mx-auto max-w-screen-2xl px-3 sm:px-10 mt-12">
       <div className="mb-10 flex justify-center">
         <div className="text-center w-full lg:w-2/5">
-          <h2 class="text-xl lg:text-2xl mb-2 font-serif font-semibold">
+          <h2 className="text-xl lg:text-2xl mb-2 font-serif font-semibold">
             Popular Products for Daily Shopping
           </h2>
-          <p class="text-base font-sans text-gray-600 leading-6">
+          <p className="text-base font-sans text-gray-600 leading-6">
             See all our popular products in this week. You can choose your daily needs products from
             this list and get some special offer with free shipping.
           </p>
@@ -40,23 +40,23 @@ function SliderHeader() {
                   </div>
                 </span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div className="relative mb-1">
+                  <span className="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 className="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span className="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div className="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div className="font-serif product-price font-bold">
+                    <span className="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span className="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -77,23 +77,23 @@ function SliderHeader() {
               <div className="relative flex justify-center w-full cursor-pointer">
                 <span className=""></span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div className="relative mb-1">
+                  <span className="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 className="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span className="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div className="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div className="font-serif product-price font-bold">
+                    <span className="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span className="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -114,23 +114,23 @@ function SliderHeader() {
               <div className="relative flex justify-center w-full cursor-pointer">
                 <span className=""></span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div calssName="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div calssName="relative mb-1">
+                  <span calssName="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 calssName="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span calssName="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div calssName="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div calssName="font-serif product-price font-bold">
+                    <span calssName="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    calssName="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span calssName="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -151,23 +151,23 @@ function SliderHeader() {
               <div className="relative flex justify-center w-full cursor-pointer">
                 <span className=""></span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div calssName="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div calssName="relative mb-1">
+                  <span calssName="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 calssName="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span calssName="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div calssName="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div calssName="font-serif product-price font-bold">
+                    <span calssName="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    calssName="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span calssName="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -188,23 +188,23 @@ function SliderHeader() {
               <div className="relative flex justify-center w-full cursor-pointer">
                 <span className=""></span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div className="relative mb-1">
+                  <span className="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 className="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span className="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div className="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div className="font-serif product-price font-bold">
+                    <span className="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span className="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -225,23 +225,23 @@ function SliderHeader() {
               <div className="relative flex justify-center w-full cursor-pointer">
                 <span className=""></span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div calssName="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div calssName="relative mb-1">
+                  <span calssName="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 calssName="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span calssName="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div calssName="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div calssName="font-serif product-price font-bold">
+                    <span calssName="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    calssName="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span calssName="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -262,23 +262,23 @@ function SliderHeader() {
               <div className="relative flex justify-center w-full cursor-pointer">
                 <span className=""></span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div className="relative mb-1">
+                  <span className="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 className="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span className="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div className="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div className="font-serif product-price font-bold">
+                    <span className="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span className="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -299,23 +299,23 @@ function SliderHeader() {
               <div className="relative flex justify-center w-full cursor-pointer">
                 <span className=""></span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div className="relative mb-1">
+                  <span className="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 className="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span className="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div className="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div className="font-serif product-price font-bold">
+                    <span className="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span className="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -336,23 +336,23 @@ function SliderHeader() {
               <div className="relative flex justify-center w-full cursor-pointer">
                 <span className=""></span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div className="relative mb-1">
+                  <span className="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 className="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span className="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div className="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div className="font-serif product-price font-bold">
+                    <span className="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span className="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -373,23 +373,23 @@ function SliderHeader() {
               <div className="relative flex justify-center w-full cursor-pointer">
                 <span className=""></span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div className="relative mb-1">
+                  <span className="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 className="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span className="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div className="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div className="font-serif product-price font-bold">
+                    <span className="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span className="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -410,23 +410,23 @@ function SliderHeader() {
               <div className="relative flex justify-center w-full cursor-pointer">
                 <span className=""></span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div className="relative mb-1">
+                  <span className="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 className="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span className="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div className="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div className="font-serif product-price font-bold">
+                    <span className="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span className="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -447,23 +447,23 @@ function SliderHeader() {
               <div className="relative flex justify-center w-full cursor-pointer">
                 <span className=""></span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div className="relative mb-1">
+                  <span className="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 className="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span className="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div className="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div className="font-serif product-price font-bold">
+                    <span className="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span className="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -484,23 +484,23 @@ function SliderHeader() {
               <div className="relative flex justify-center w-full cursor-pointer">
                 <span className=""></span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div className="relative mb-1">
+                  <span className="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 className="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span className="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div className="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div className="font-serif product-price font-bold">
+                    <span className="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span className="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -521,23 +521,23 @@ function SliderHeader() {
               <div className="relative flex justify-center w-full cursor-pointer">
                 <span className=""></span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div className="relative mb-1">
+                  <span className="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 className="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span className="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div className="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div className="font-serif product-price font-bold">
+                    <span className="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span className="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -558,23 +558,23 @@ function SliderHeader() {
               <div className="relative flex justify-center w-full cursor-pointer">
                 <span className=""></span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div className="relative mb-1">
+                  <span className="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 className="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span className="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div className="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div className="font-serif product-price font-bold">
+                    <span className="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span className="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -595,23 +595,23 @@ function SliderHeader() {
               <div className="relative flex justify-center w-full cursor-pointer">
                 <span className=""></span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div className="relative mb-1">
+                  <span className="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 className="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span className="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div className="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div className="font-serif product-price font-bold">
+                    <span className="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span className="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -632,23 +632,23 @@ function SliderHeader() {
               <div className="relative flex justify-center w-full cursor-pointer">
                 <span className=""></span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div className="relative mb-1">
+                  <span className="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 className="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span className="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div className="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div className="font-serif product-price font-bold">
+                    <span className="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span className="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"
@@ -669,23 +669,23 @@ function SliderHeader() {
               <div className="relative flex justify-center w-full cursor-pointer">
                 <span className=""></span>
               </div>
-              <div class="w-full px-3 lg:px-4 pb-4 overflow-hidden">
-                <div class="relative mb-1">
-                  <span class="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
-                  <h2 class="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
-                    <span class="line-clamp-2">Rainbow Chard</span>
+              <div className="w-full px-3 lg:px-4 pb-4 overflow-hidden">
+                <div className="relative mb-1">
+                  <span className="text-gray-400 font-medium text-xs d-block mb-1">1lb</span>
+                  <h2 className="text-heading truncate mb-0 block text-sm font-medium text-gray-600">
+                    <span className="line-clamp-2">Rainbow Chard</span>
                   </h2>
                 </div>
-                <div class="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
-                  <div class="font-serif product-price font-bold">
-                    <span class="inline-block text-lg font-semibold text-gray-800">$12</span>
+                <div className="flex justify-between items-center text-heading text-sm sm:text-base space-s-2 md:text-base lg:text-xl">
+                  <div className="font-serif product-price font-bold">
+                    <span className="inline-block text-lg font-semibold text-gray-800">$12</span>
                   </div>
                   <button
                     aria-label="cart"
-                    class="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
+                    className="h-9 w-9 flex items-center justify-center border border-gray-200 rounded text-emerald-500 hover:border-emerald-500 hover:bg-emerald-500 hover:text-white transition-all"
                   >
                     {' '}
-                    <span class="text-xl">
+                    <span className="text-xl">
                       <svg
                         stroke="currentColor"
                         fill="currentColor"

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Transition from '../../utils/transition';
 import Dropdown from '../../utils/dropdown';
 import { SiMetrodelaciudaddemexico } from 'react-icons/si';
+import { ROUTES } from '../../router/router';
 
 function Header() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -49,7 +50,7 @@ function Header() {
           {/* Site branding */}
           <div className="flex-shrink-0 mr-4">
             {/* Logo */}
-            <Link to="/" className="block" aria-label="Cruip">
+            <Link to={`${ROUTES.HOME}`} className="block" aria-label="Cruip">
               <SiMetrodelaciudaddemexico className="w-8 h-8" />
             </Link>
           </div>
@@ -121,24 +122,46 @@ function Header() {
             </ul>
 
             {/* Desktop sign in links */}
-            <ul className="flex flex-grow justify-end flex-wrap items-center">
-              <li>
-                <Link
-                  to="/login"
-                  className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
-                >
-                  Sign in
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/register"
-                  className="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3"
-                >
-                  <span>Sign up</span>
-                </Link>
-              </li>
-            </ul>
+
+            {localStorage.getItem('token') ? (
+              <ul className="flex flex-grow justify-end flex-wrap items-center">
+                <li>
+                  <Link
+                    to={`${ROUTES.ADMIN}`}
+                    className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                  >
+                    Dashboard
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/logout"
+                    className="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3"
+                  >
+                    <span>Logout</span>
+                  </Link>
+                </li>
+              </ul>
+            ) : (
+              <ul className="flex flex-grow justify-end flex-wrap items-center">
+                <li>
+                  <Link
+                    to="/login"
+                    className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+                  >
+                    Sign in
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/register"
+                    className="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3"
+                  >
+                    <span>Sign up</span>
+                  </Link>
+                </li>
+              </ul>
+            )}
           </nav>
 
           {/* Mobile menu */}
@@ -228,16 +251,33 @@ function Header() {
                     </ul>
                   </li>
 
-                  <Link to="/login">
-                    <li className="flex font-medium text-gray-600 hover:text-gray-900 py-2 justify-center w-full">
-                      <span>Sign in</span>
-                    </li>
-                  </Link>
-                  <Link to="/register">
-                    <li className="btn-sm text-gray-200 text-center bg-gray-900 hover:bg-gray-800 w-full my-2">
-                      <span>Sign up</span>
-                    </li>
-                  </Link>
+                  {localStorage.getItem('token') ? (
+                    <>
+                      <Link to={`${ROUTES.ADMIN}`}>
+                        <li className="flex font-medium text-gray-600 hover:text-gray-900 py-2 justify-center w-full">
+                          <span>Dashboard</span>
+                        </li>
+                      </Link>
+                      <Link to={`${ROUTES.LOGOUT}`}>
+                        <li className="btn-sm text-gray-200 text-center bg-gray-900 hover:bg-gray-800 w-full my-2">
+                          <span>Logout</span>
+                        </li>
+                      </Link>
+                    </>
+                  ) : (
+                    <>
+                      <Link to="/login">
+                        <li className="flex font-medium text-gray-600 hover:text-gray-900 py-2 justify-center w-full">
+                          <span>Sign in</span>
+                        </li>
+                      </Link>
+                      <Link to="/register">
+                        <li className="btn-sm text-gray-200 text-center bg-gray-900 hover:bg-gray-800 w-full my-2">
+                          <span>Sign up</span>
+                        </li>
+                      </Link>
+                    </>
+                  )}
                 </ul>
               </Transition>
             </div>

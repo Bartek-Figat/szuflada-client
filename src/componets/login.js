@@ -10,6 +10,7 @@ import { Form } from '../atomic/molecues/from';
 import { Label } from '../atomic/atoms/label';
 import { FormContent } from '../atomic/molecues/index';
 import AuthImage from '../images/photo-1591818250210-48fba09a2305.png';
+import { ROUTES } from '../router/router';
 
 const userSchema = yup.object().shape({
   email: yup.string().email('Must be a valid email').required('Email is required'),
@@ -33,7 +34,7 @@ export const LoginForm = () => {
     useEffect(() => {
       if (!login.token && !login.success) return;
       localStorage.setItem('token', login.token);
-      navigate('/admin', { replace: true });
+      navigate(`${ROUTES.ADMIN}`, { replace: true });
     }, [submitForm]);
     return null;
   };
