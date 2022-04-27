@@ -1,5 +1,4 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
-import { Navigate } from 'react-router-dom';
 import { instance } from '../config/axios';
 
 export const userReources = createAsyncThunk(

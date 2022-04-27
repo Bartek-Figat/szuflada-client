@@ -34,7 +34,7 @@ export const LoginForm = () => {
     useEffect(() => {
       if (!login.token && !login.success) return;
       localStorage.setItem('token', login.token);
-      navigate(`${ROUTES.ADMIN}`, { replace: true });
+      navigate(`${ROUTES.ACCOUNT}`, { replace: true });
     }, [submitForm]);
     return null;
   };

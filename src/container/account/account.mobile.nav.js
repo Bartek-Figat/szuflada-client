@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Listbox, Transition } from '@headlessui/react';
 import { FaChevronDown } from 'react-icons/fa';
 
@@ -41,7 +41,7 @@ export const AccountNavMobile = ({ options }) => {
                   value={option}
                 >
                   {({ selected, active }) => (
-                    <Link to={option.slug}>
+                    <NavLink to={option.slug}>
                       <span className="flex items-center">
                         {option?.icon}
                         <span
@@ -58,7 +58,7 @@ export const AccountNavMobile = ({ options }) => {
                           />
                         ) : null}
                       </span>
-                    </Link>
+                    </NavLink>
                   )}
                 </Listbox.Option>
               ))}

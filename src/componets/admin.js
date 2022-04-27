@@ -15,7 +15,7 @@ export const Admin = () => {
   }, [dispatch]);
   return (
     <>
-      {/* {fetchUser.user
+      {fetchUser.user
         ? Object.values(fetchUser.user).map((details) => {
             return (
               <h1 key={details.email}>
@@ -23,7 +23,7 @@ export const Admin = () => {
               </h1>
             );
           })
-        : 'no data'} */}
+        : 'no data'}
       <AccountLayout>
         <Outlet />
       </AccountLayout>

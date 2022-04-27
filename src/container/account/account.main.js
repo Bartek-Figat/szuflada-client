@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { BiUserCircle } from 'react-icons/bi';
 import { BsBag } from 'react-icons/bs';
 import { AiOutlineHeart } from 'react-icons/ai';
@@ -9,6 +10,7 @@ import { MdOutlineLiveHelp } from 'react-icons/md';
 import { AccountNav } from './account.nav';
 import { AccountNavMobile } from './account.mobile.nav';
 import { ROUTES } from '../../router/router';
+import { ShopSidebar } from '../order/sidebar';
 
 const accountMenu = [
   {
@@ -49,7 +51,7 @@ const accountMenu = [
 ];
 export const AccountLayout = ({ children }) => {
   return (
-    <main className="relative flex-grow">
+    <>
       <div className="border-t border-b border-border-base">
         <div className="mx-auto max-w-[1920px] px-4 md:px-6 lg:px-8 2xl:px-10">
           <div className="pt-10 2xl:pt-12 pb-12 lg:pb-14 xl:pb-16 2xl:pb-20 xl:max-w-screen-xl 2xl:max-w-[1400px] mx-auto">
@@ -58,7 +60,7 @@ export const AccountLayout = ({ children }) => {
                 <AccountNavMobile options={accountMenu} />
               </div>
               <div className="hidden lg:block shrink-0 w-72 xl:w-[380px] ltr:mr-7 rtl:ml-7 xl:ltr:mr-8 xl:rtl:ml-8">
-                <AccountNav options={accountMenu} />
+                <ShopSidebar options={accountMenu} />
               </div>
 
               <div className="w-full p-4 mt-4 border rounded-md lg:mt-0 border-border-base sm:p-5 lg:py-8 2xl:py-10 lg:px-7 2xl:px-12">
@@ -68,6 +70,6 @@ export const AccountLayout = ({ children }) => {
           </div>
         </div>
       </div>
-    </main>
+    </>
   );
 };

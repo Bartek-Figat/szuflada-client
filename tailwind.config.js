@@ -1,6 +1,9 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    screen: {
+      xxs: '540px',
+    },
     extend: {
       colors: {
         brand: {
@@ -106,5 +109,5 @@ module.exports = {
       },
     },
   },
-  plugins: [require('@tailwindcss/forms')],
+  plugins: [require('@tailwindcss/forms'), require('@tailwindcss/aspect-ratio')],
 };

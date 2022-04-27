@@ -11,8 +11,9 @@ export const loginUser = createAsyncThunk(
     };
     try {
       const { data } = await instance.post('/login', response);
-      const { generateAccessToken } = data;
-      return await generateAccessToken;
+      console.log(data);
+      const { token } = data;
+      return await token;
     } catch (error) {
       if (!error.response) {
         throw error;
